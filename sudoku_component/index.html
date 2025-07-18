@@ -46,6 +46,28 @@
     input:not([readonly]) {
       color: #3f7d9b;  /* soft blue text for user inputs */
     }
+    button {
+      background-color: #4CAF50;   /* Streamlit-inspired green */
+      color: white;                /* white text */
+      border: none;                /* no border */
+      border-radius: 8px;          /* rounded corners for a smoother look */
+      font-size: 16px;             /* decent font size */
+      padding: 12px 20px;          /* better padding for size */
+      cursor: pointer;            /* pointer cursor for interactivity */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition */
+      font-weight: bold;           /* make the text slightly bold */
+      display: inline-block;       /* keep it inline */
+      text-align: center;          /* centered text */
+    }
+    
+    button:hover {
+      background-color: #45a049;   /* slightly darker green on hover */
+      transform: scale(1.05);       /* slight scaling effect on hover */
+    }
+    
+    button:focus {
+      outline: none;               /* remove default outline */
+    }
   </style>
 </head>
 <body>
