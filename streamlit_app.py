@@ -15,29 +15,8 @@ student_number = st.text_input("Student Number")
 st.header("Part I: Sudoku Puzzle (3pts)")
 st.write("**Instruction:** Solve the following Sudoku puzzle using the numbers 1 to 9.")
 
-puzzle = [
-    [8, 6, 0, 0, 3, 5, 0, 0, 9],
-    [0, 0, 0, 2, 0, 9, 0, 0, 6],
-    [1, 4, 9, 6, 7, 8, 0, 5, 3],
-    [2, 5, 4, 7, 9, 0, 0, 0, 0],
-    [0, 1, 0, 0, 5, 4, 7, 9, 0],
-    [0, 0, 0, 3, 6, 0, 0, 1, 4],
-    [7, 2, 1, 4, 8, 0, 9, 0, 5],
-    [6, 0, 8, 0, 2, 0, 3, 4, 1],
-    [4, 0, 0, 9, 1, 6, 8, 0, 0]
-]
-
-solution = [
-    [8, 6, 2, 1, 3, 5, 4, 7, 9],
-    [5, 7, 3, 2, 4, 9, 1, 8, 6],
-    [1, 4, 9, 6, 7, 8, 2, 5, 3],
-    [2, 5, 4, 7, 9, 1, 6, 3, 8],
-    [3, 1, 6, 8, 5, 4, 7, 9, 2],
-    [9, 8, 7, 3, 6, 2, 5, 1, 4],
-    [7, 2, 1, 4, 8, 3, 9, 6, 5],
-    [6, 9, 8, 5, 2, 7, 3, 4, 1],
-    [4, 3, 5, 9, 1, 6, 8, 2, 7]
-]
+puzzle = st.secrets["sudoku"]["puzzle"]
+solution = st.secrets["sudoku"["solution"]
 
 sudoku = components.declare_component("sudoku", path="sudoku_component")
 # Call the sudoku component passing the puzzle as default
