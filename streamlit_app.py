@@ -23,6 +23,8 @@ sudoku = components.declare_component("sudoku", path="sudoku_component")
 board = sudoku(default=puzzle)
 # st.write(board)
 
+answers = st.secrets["answers"]
+
 # ==== Part II: Counting Combinations (15pts) ====
 st.header("Part II: Counting Combinations (15pts)")
 st.write("**Instruction:** Given the problem below, answer the following questions by selecting the correct answer.")
@@ -36,11 +38,11 @@ st.markdown("""
 # Image
 st.image("5ch.png")
 questions_2_6 = {
-    2: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], "d"),
-    3: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. All of the above"], "d"),
-    4: ("How many possible characters are there for the first spot in the password?", ["a. 60 possible letters and numbers", "b. 62 possible letters and numbers", "c. 61 possible letters and numbers", "d. 59 possible letters and numbers"], "b"),
-    5: ("How many possible characters are there for the fifth spot in the password?", ["a. 60 possible letters and numbers", "b. 58 possible letters and numbers", "c. 61 possible letters and numbers", "d. 59 possible letters and numbers"], "b"),
-    6: ("How many total password combinations are possible?", ["a. 44,261,653,680 possible combinations", "b. 916,132,832 possible combinations", "c. 776,520,240 possible combinations", "d. 13,388,280 possible combinations"], "c"),
+    2: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], answers["q2"]),
+    3: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. All of the above"], answers["q3"]),
+    4: ("How many possible characters are there for the first spot in the password?", ["a. 60 possible letters and numbers", "b. 62 possible letters and numbers", "c. 61 possible letters and numbers", "d. 59 possible letters and numbers"], answers["q4"]),
+    5: ("How many possible characters are there for the fifth spot in the password?", ["a. 60 possible letters and numbers", "b. 58 possible letters and numbers", "c. 61 possible letters and numbers", "d. 59 possible letters and numbers"], answers["q5"]),
+    6: ("How many total password combinations are possible?", ["a. 44,261,653,680 possible combinations", "b. 916,132,832 possible combinations", "c. 776,520,240 possible combinations", "d. 13,388,280 possible combinations"], answers["q6"]),
 }
 for qnum in questions_2_6:
     q, opts, _ = questions_2_6[qnum]
@@ -54,11 +56,11 @@ st.markdown("""
 # Image
 st.image("5ch.png")
 questions_7_11 = {
-    7: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], "a"),
-    8: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. All of the above"], "b"),
-    9: ("How many possible characters are there for the first spot in the password?", ["a. 62 possible letters and numbers", "b. 10 possible numbers", "c. 61 possible letters and numbers", "d. 9 possible numbers"], "b"),
-    10: ("How many possible characters are there for the fifth spot in the password?", ["a. 60 possible letters and numbers", "b. 10 possible numbers", "c. 61 possible letters and numbers", "d. 6 possible numbers"], "d"),
-    11: ("How many total password combinations are possible?", ["a. 44,261,653,680 possible combinations", "b. 916,132,832 possible combinations", "c. 100,000 possible combinations", "d. 30,240 possible combinations"], "d"),
+    7: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], answers["q7"]),
+    8: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. All of the above"], answers["q8"]),
+    9: ("How many possible characters are there for the first spot in the password?", ["a. 62 possible letters and numbers", "b. 10 possible numbers", "c. 61 possible letters and numbers", "d. 9 possible numbers"], answers["q9"]),
+    10: ("How many possible characters are there for the fifth spot in the password?", ["a. 60 possible letters and numbers", "b. 10 possible numbers", "c. 61 possible letters and numbers", "d. 6 possible numbers"], answers["q10"]),
+    11: ("How many total password combinations are possible?", ["a. 44,261,653,680 possible combinations", "b. 916,132,832 possible combinations", "c. 100,000 possible combinations", "d. 30,240 possible combinations"], answers["q11"]),
 }
 for qnum in questions_7_11:
     q, opts, _ = questions_7_11[qnum]
@@ -72,11 +74,11 @@ st.markdown("""
 # Image
 st.image("5ch.png")
 questions_12_16 = {
-    12: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], "c"),
-    13: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. b and c" ], "d"),
-    14: ("How many possible characters are there for the first spot?", ["a. 62 possible letters and numbers", "b. 26 possible letters and numbers", "c. 36 possible letters and numbers", "d. 10 possible letters and numbers"], "c"),
-    15: ("How many possible characters are there for the fifth spot?", ["a. 26 possible letters and numbers", "b. 22 possible letters and numbers", "c. 36 possible letters and numbers", "d. 32 possible letters and numbers"], "c"),
-    16: ("How many total password combinations are possible?", ["a. 916,132,832 possible combinations", "b. 60,466,176 possible combinations", "c. 45,239,040 possible combinations", "d. 11,881,376 possible combinations"], "b"),
+    12: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], answers["q12"]),
+    13: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. b and c" ], answers["q13"]),
+    14: ("How many possible characters are there for the first spot?", ["a. 62 possible letters and numbers", "b. 26 possible letters and numbers", "c. 36 possible letters and numbers", "d. 10 possible letters and numbers"], answers["q14"]),
+    15: ("How many possible characters are there for the fifth spot?", ["a. 26 possible letters and numbers", "b. 22 possible letters and numbers", "c. 36 possible letters and numbers", "d. 32 possible letters and numbers"], answers["q15"]),
+    16: ("How many total password combinations are possible?", ["a. 916,132,832 possible combinations", "b. 60,466,176 possible combinations", "c. 45,239,040 possible combinations", "d. 11,881,376 possible combinations"], answers["q16"]),
 }
 for qnum in questions_12_16:
     q, opts, _ = questions_12_16[qnum]
@@ -87,10 +89,10 @@ st.header("Part III: Greatest Common Factor (2pts)")
 st.write("**Instruction:** Solve the following problem.")
 
 gcf_questions = {
-    17: "Find the GCF of 33 and 22 using the factorization method.",
-    18: "Find the GCF of 25 and 50 using the factorization method.",
-    19: "Find the GCF of 36 and 54 using the factorization method.",
-    20: "Find the GCF of 45 and 60 using the factorization method.",
+    17: "Find the GCF of 44 and 22 using the factorization method.",
+    18: "Find the GCF of 20 and 50 using the factorization method.",
+    19: "Find the GCF of 32 and 48 using the factorization method.",
+    20: "Find the GCF of 30 and 45 using the factorization method.",
 }
 for qnum, qtext in gcf_questions.items():
     st.text_input(f"**{qnum}. {qtext}**", key=f"gcf{qnum}")
@@ -120,13 +122,8 @@ def grade_count():
     return round(correct / total * 15, 2)
 
 def grade_gcf():
-    answers = {
-        "gcf17": "11",
-        "gcf18": "25",
-        "gcf19": "18",
-        "gcf20": "15",
-    }
-    score = sum(1 for k, v in answers.items() if st.session_state.get(k) == v) * 0.5
+    gcf_answers = st.secrets["gcf"]
+    score = sum(1 for k, v in gcf_answers.items() if st.session_state.get(k) == v) * 0.5
     return round(score, 2)
 
 # if st.button("Grade Test"):
