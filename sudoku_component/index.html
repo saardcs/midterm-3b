@@ -47,40 +47,11 @@
     input:not([readonly]) {
       color: #3f7d9b;  /* bluish color for editable inputs */
     }
-    button {
-      background-color: #f0f0f5;   /* subtle, light gray */
-      color: #333;                  /* dark text for readability */
-      border: 1px solid #ccc;       /* thin, neutral border */
-      border-radius: 6px;           /* rounded corners for a gentle look */
-      font-size: 14px;              /* consistent, smaller font size */
-      padding: 8px 16px;            /* moderate padding */
-      cursor: pointer;             /* pointer cursor for interactivity */
-      display: inline-block;        /* inline display */
-      text-align: center;           /* center the text */
-      margin-top: 20px;             /* small space above the button */
-    }
-    
-    button:focus {
-      outline: none;                /* remove default focus outline */
-    }
   </style>
 </head>
 <body>
   <table id="sudoku"></table>
-  <button onclick="clearUserInput()">Clear Input</button>
   <script>
-    function clearUserInput() {
-      for (let i = 0; i < 9; i++) {
-        for (let j = 0; j < 9; j++) {
-          const inputEl = document.getElementById(`cell-${i}-${j}`);
-          if (!inputEl.readOnly) {
-            inputEl.value = '';
-            inputEl.style.backgroundColor = '';
-            inputEl.style.color = '#3f7d9b';
-          }
-        }
-      }
-    }
     const puzzle = [
       [8, 6, 0, 0, 3, 5, 0, 0, 9],
       [0, 0, 0, 2, 0, 9, 0, 0, 6],
