@@ -166,9 +166,6 @@ if st.button("Submit Test"):
         # Save to file
         import json, os
         os.makedirs("submissions", exist_ok=True)
-        file_path = f"submissions/{student_number}.json"
-        with open(file_path, "w") as f:
-            json.dump(submission, f, indent=2)
 
         # st.markdown("### 📄 Submission Preview")
         # st.json(submission)
@@ -192,19 +189,33 @@ if st.button("Submit Test"):
         import datetime
         
         # Timestamp for filenames and sheets
-        # timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        filename_ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        json_path = os.path.join("submissions", f'{selected_class.replace("/", "-")}_{nickname}_{student_number}_{filename_ts}.json')
+        with open(json_path, "w") as f:
+            json.dump(submission, f, indent=2)
         
         # Convert your submission dict into a list of values (flatten if needed)
         row = [
-            submission["student_number"],
-            submission["nickname"],
-            submission["scores"]["part1_sudoku"],
-            submission["scores"]["part2_combinations"],
-            submission["scores"]["part3_gcf"],
-            submission["scores"]["total"]
+            student_number,
+            nickname,
+            s1,
+            s2,
+            s3,
+            total,
+            timestamp
             # add other fields or stringify answers if needed
         ]
 
         sheet.append_row(row)
         # st.success("Submission sent to Google Sheets! ✅")
-        st.success(f"Submission received! ✅ Total Score: {round(total)}/20")
+        st.success(f"Success! Download your answer file and submit it via Google Classroom.")
+        
+        with open(json_path, "rb") as f:
+            st.download_button(
+            "Download answers",
+                data=f,
+                file_name=os.path.basename(json_path),
+                mime="application/json"
+            )
