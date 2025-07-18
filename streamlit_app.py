@@ -69,13 +69,13 @@ for qnum in questions_7_11:
 st.markdown("""
 **(item 12-16)** Suppose that the five-character code has the following restrictions:  
 - Numbers and letters  
-- Uppercase letters ONLY
+- Lowercase letters ONLY
 """)
 # Image
 st.image("5ch.png")
 questions_12_16 = {
     12: ("What characters can make up the code?", ["a. 10 numbers", "b. 26 letters", "c. 10 numbers and 26 letters", "d. 10 numbers and 52 letters"], answers["q12"]),
-    13: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. b and c" ], answers["q13"]),
+    13: ("What sets of characters can the code contain?", ["a. a-z (lowercase letters)", "b. 0-9 (numbers)", "c. A-Z (uppercase letters)", "d. a and b" ], answers["q13"]),
     14: ("How many possible characters are there for the first spot?", ["a. 62 possible letters and numbers", "b. 26 possible letters and numbers", "c. 36 possible letters and numbers", "d. 10 possible letters and numbers"], answers["q14"]),
     15: ("How many possible characters are there for the fifth spot?", ["a. 26 possible letters and numbers", "b. 22 possible letters and numbers", "c. 36 possible letters and numbers", "d. 32 possible letters and numbers"], answers["q15"]),
     16: ("How many total password combinations are possible?", ["a. 916,132,832 possible combinations", "b. 60,466,176 possible combinations", "c. 45,239,040 possible combinations", "d. 11,881,376 possible combinations"], answers["q16"]),
