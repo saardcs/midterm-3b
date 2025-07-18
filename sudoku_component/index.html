@@ -40,8 +40,11 @@
     input[readonly] {
       background-color: transparent;
       font-weight: bold;
-      color: #6a8caf;
+      color: #222;
       cursor: default;
+    }
+    input:not([readonly]) {
+      color: #6a8caf;  /* soft blue text for user inputs */
     }
   </style>
 </head>
