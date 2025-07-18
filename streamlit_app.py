@@ -16,7 +16,7 @@ st.header("Part I: Sudoku Puzzle (3pts)")
 st.write("**Instruction:** Solve the following Sudoku puzzle using the numbers 1 to 9.")
 
 puzzle = st.secrets["sudoku"]["puzzle"]
-solution = st.secrets["sudoku"["solution"]
+solution = st.secrets["sudoku"]["solution"]
 
 sudoku = components.declare_component("sudoku", path="sudoku_component")
 # Call the sudoku component passing the puzzle as default
